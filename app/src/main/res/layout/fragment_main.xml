@@ -1,0 +1,98 @@
+<!-- res/layout/fragment_main.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- User's General Information Fields (as before) -->
+
+        <TextView
+            android:id="@+id/NameofBoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/meticula"
+            android:padding="10dp"
+            android:text="UserName"
+            android:textSize="24sp" />
+
+        <!-- Additional fields for Medical Record -->
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/meticula"
+            android:padding="5dp"
+            android:text="Add data:" />
+
+        <RadioGroup
+            android:id="@+id/typeRadiogrp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/AllergyToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/meticula"
+                android:text="Allergy" />
+
+            <RadioButton
+                android:id="@+id/DiseaseToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/meticula"
+                android:text="Disease" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etDisease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/meticula"
+            android:hint="Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/meticula"
+            android:hint="Description"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etSince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/meticula"
+            android:hint="Since (e.g., 2020)"
+            android:inputType="text" />
+
+        <!-- Button to add disease record -->
+        <Button
+            android:id="@+id/btnAddDisease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/meticula"
+            android:text="Add Disease Record" />
+
+        <!-- RecyclerView to display the list of diseases -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Save Button -->
+    </LinearLayout>
+</ScrollView>
